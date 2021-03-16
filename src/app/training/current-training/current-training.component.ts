@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-current-training',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CurrentTrainingComponent implements OnInit {
 
-  constructor() { }
+  progress = 0;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+    setInterval(() => {
+      if (this.progress < 100) {
+        this.progress = this.progress + 10;
+      }
+    }, 1000);
   }
 
 }
