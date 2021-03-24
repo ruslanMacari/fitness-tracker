@@ -5,22 +5,13 @@
       <mat-form-field>
         <mat-label>Favorite food</mat-label>
         <mat-select>
-          <mat-option value="crunches">
-            Crunches
-          </mat-option>
-          <mat-option value="touch-toes">
-            Touch Toes
-          </mat-option>
-          <mat-option value="side-lunges">
-            Side Lunges
-          </mat-option>
-          <mat-option value="burpees">
-            Burpees
+          <mat-option *ngFor="let exercise of exercises; index as i; first as isFirst" [value]="exercise.id">
+            {{exercise.name}}
           </mat-option>
         </mat-select>
       </mat-form-field>
     </mat-card-content>
-    <mat-card-actions fxLayoutAlign="center">
+    <mat-card-actions fxLayoutAlign="center">9
       <button mat-button type="submit" (click)="onStartTraining()">Start</button>
     </mat-card-actions>
   </mat-card>
