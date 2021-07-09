@@ -4,7 +4,7 @@
       <mat-card-title fxLayoutAlign="center">Time to start a workout!</mat-card-title>
       <mat-card-content fxLayoutAlign="center">
         <mat-form-field>
-          <mat-label>Favorite food</mat-label>
+          <mat-label>Choose Exercise</mat-label>
           <mat-select placeholder="Choose Exercise" ngModel name="exercise" required>
             <mat-option *ngFor="let exercise of exercises; index as i; first as isFirst"
                         [value]="exercise.id">
